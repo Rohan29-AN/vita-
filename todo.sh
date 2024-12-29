@@ -37,3 +37,19 @@ delete_task() {
     echo "Task $1 deleted."
 }
 
+case "$1" in
+  add)
+    shift
+    add_task "$*"
+    ;;
+  list)
+    list_tasks
+    ;;
+  done)
+    mark_done "$2"
+    ;;
+  delete)
+    delete_task "$2"
+    ;;
+esac
+
