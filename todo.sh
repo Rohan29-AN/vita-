@@ -31,3 +31,9 @@ mark_done() {
 }
 
 
+# Delete a task
+delete_task() {
+    sed -i "${1}d" "$TASKS_FILE"
+    echo "Task $1 deleted."
+}
+
