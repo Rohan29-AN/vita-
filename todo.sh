@@ -24,3 +24,10 @@ add_task() {
     echo "$1" >> "$TASKS_FILE"
     echo "Task added: $1"
 }
+# Mark a task as complete
+mark_done() {
+    sed -i "${1}s/^/[DONE] /" "$TASKS_FILE"
+    echo "Task $i marked as complete"
+}
+
+
