@@ -12,3 +12,9 @@ fi
 if [ ! -f "$TASKS_FILE" ]; then
     touch "$TASKS_FILE"
 fi
+
+#Functions to list all tasks
+list_tasks() {
+    echo -e "Tasks :"
+    nl -w2 -s". " "$TASKS_FILE"
+}
