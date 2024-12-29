@@ -18,3 +18,9 @@ list_tasks() {
     echo -e "Tasks :"
     nl -w2 -s". " "$TASKS_FILE"
 }
+
+#Add task
+add_task() {
+    echo "$1" >> "$TASKS_FILE"
+    echo "Task added: $1"
+}
